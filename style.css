@@ -88,3 +88,50 @@ h1, h2, h3, h4, h5 {
   from { opacity: 0; transform: translateY(-20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(10, 10, 10, 0.9);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 1.5s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-inline {
+  width: 60px;
+  height: auto;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 6px #00ffff);
+  transition: transform 0.3s ease;
+}
+
+.logo-inline:hover {
+  transform: scale(1.05);
+}
+
+.header-text h1 {
+  font-size: 1.8em;
+  margin: 0;
+  color: #00bfff;
+}
+
+.header-text .tagline {
+  font-size: 0.9em;
+  color: #aaa;
+  margin: 2px 0 0 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
