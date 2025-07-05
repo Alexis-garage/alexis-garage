@@ -29,6 +29,8 @@ h1 {
   justify-content: center;
   gap: 20px;
   padding: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .card {
@@ -36,8 +38,25 @@ h1 {
   border: 1px solid #444;
   border-radius: 10px;
   padding: 20px;
-  width: 250px;
+  width: 220px;
   transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+  flex: 1 1 220px;
+}
+
+@media (max-width: 950px) {
+  .services {
+    flex-wrap: wrap;
+  }
+  .card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;
+  }
 }
 
 .card:hover {
