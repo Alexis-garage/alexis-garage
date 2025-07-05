@@ -70,7 +70,7 @@
   margin-top: 20px;
 }
 .contact-buttons .button {
-  background-color: #00bfff;
+  background-color: #28a745;
   color: white;
   padding: 12px 20px;
   text-decoration: none;
@@ -79,7 +79,7 @@
   transition: background-color 0.3s;
 }
 .contact-buttons .button:hover {
-  background-color: #0080c0;
+  background-color: #1e7e34;
 }
   </style>
  </head>
@@ -165,14 +165,21 @@
   <!-- Request Section -->
   <section class="request-section" id="request">
    <h2>
-    Need a Quote or Callback?
+    Request Service
    </h2>
    <p>
-    We're ready to help. Choose your service and leave your details.
+    Fill out the contact form below to get a quote or ask a question. WeвЂ™ll respond as soon as possible.
    </p>
-   <a class="whatsapp-btn" href="#contact">
-    Request Now
-   </a>
+   <form action="https://formsubmit.co/info@alexis-garage.com" class="contact-form" method="POST">
+    <input name="_captcha" type="hidden" value="false"/>
+    <input name="_template" type="hidden" value="table"/>
+    <input name="name" placeholder="Your Name" required="" type="text"/>
+    <input name="email" placeholder="Your Email" required="" type="email"/>
+    <textarea name="message" placeholder="Your Message" required="" rows="4"></textarea>
+    <button class="button" type="submit">
+     Send Request
+    </button>
+   </form>
   </section>
   <!-- Why Us Section -->
   <section class="why-us" id="why">
@@ -223,4 +230,5 @@
   </footer>
  </body>
 </html>
+
 
