@@ -8,6 +8,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
     html { scroll-behavior: smooth; }
+
+    .request-section {
+      background: #181818;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .request-section h2 {
+      color: #00bfff;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .request-section p {
+      font-size: 1.1em;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .why-us {
+      background: #121212;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .why-us h2 {
+      color: #00bfff;
+      margin-bottom: 20px;
+    }
+
+    .why-us ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .why-us li {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
   </style>
 </head>
 <body>
@@ -17,7 +60,7 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Request</a></li>
+      <li><a href="#why">Why Us</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -49,7 +92,25 @@
     </div>
   </section>
 
-  <!-- Форма -->
+  <!-- Request Section -->
+  <section id="request" class="request-section">
+    <h2>Need a Quote or Callback?</h2>
+    <p>We're ready to help. Choose your service and leave your details.</p>
+    <a href="#contact" class="whatsapp-btn">Request Now</a>
+  </section>
+
+  <!-- Why Us Section -->
+  <section id="why" class="why-us">
+    <h2>Why Choose Alexis Garage?</h2>
+    <ul>
+      <li>✓ Over 10 years of experience with premium cars</li>
+      <li>✓ First in Seychelles to retrofit EV batteries</li>
+      <li>✓ Precision laser welding & stainless exhausts</li>
+      <li>✓ Custom 3D printing and rapid prototyping</li>
+    </ul>
+  </section>
+
+  <!-- Contact Form -->
   <section id="contact" class="contact-form">
     <h2>Request a Callback</h2>
     <form action="https://formspree.io/f/xgegbkda" method="POST">
@@ -74,5 +135,6 @@
 
 </body>
 </html>
+
 
 
