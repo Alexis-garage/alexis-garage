@@ -2,67 +2,152 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alexis Garage | Premium Auto Service in Seychelles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alexis Garage</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0a0a0a;
-      color: #f0f0f0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    html { scroll-behavior: smooth; }
+
+    .request-section {
+      background: #181818;
+      color: white;
       padding: 40px 20px;
+      text-align: center;
     }
-    h1 {
-      font-size: 2.5rem;
+
+    .request-section h2 {
+      color: #00bfff;
+      font-size: 1.8em;
       margin-bottom: 10px;
     }
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 40px;
-      color: #00ffe1;
+
+    .request-section p {
+      font-size: 1.1em;
+      color: #ccc;
+      margin-bottom: 20px;
     }
-    p {
-      max-width: 600px;
+
+    .why-us {
+      background: #121212;
+      color: white;
+      padding: 40px 20px;
       text-align: center;
-      line-height: 1.6;
     }
-    a.button {
-      display: inline-block;
-      margin: 10px;
-      background: #00ffe1;
-      color: #000;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
+
+    .why-us h2 {
+      color: #00bfff;
+      margin-bottom: 20px;
     }
-    a.button:hover {
-      background: #00cbb8;
+
+    .why-us ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
     }
-    footer {
-      margin-top: 60px;
-      font-size: 0.9rem;
-      color: #777;
+
+    .why-us li {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+
+    .services .card {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <h1>Alexis Garage</h1>
-  <p>Premium Auto Service in Seychelles</p>
+  <!-- Навигация -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <a href="diagnostics.html" class="button">Diagnostics & Repair</a>
-  <a href="neoenergy.html" class="button">EV Battery – NeoEnergy</a>
-  <a href="superweld.html" class="button">SuperWeld</a>
-  <a href="neoprint.html" class="button">3D Printing – NeoPrint</a>
+  <!-- Хедер -->
+  <header class="site-header">
+    <img src="assets/logo.png" alt="Alexis LTD Logo" class="logo" />
+    <h1>Alexis Garage</h1>
+    <p class="tagline">Premium Auto Service in Seychelles</p>
+  </header>
 
-  <a href="https://wa.me/2482578522" class="button" target="_blank">Contact via WhatsApp</a>
+  <!-- Услуги -->
+  <section id="services" class="services">
+    <div class="card"><a href="diagnostics.html">
+      <h2>Diagnostics & Repair</h2>
+      <p>Full diagnostics & repair for all makes.</p></a>
+    </div>
+    <div class="card"><a href="neoenergy.html">
+      <h2>NeoEnergy</h2>
+      <p>Custom EV batteries & upgrades for Nissan Leaf.</p></a>
+    </div>
+    <div class="card"><a href="superweld.html">
+      <h2>Superweld</h2>
+      <p>Precision welding for stainless steel and aluminum structures.</p></a>
+    </div>
+    <div class="card"><a href="neoprint.html">
+      <h2>NeoPrint</h2>
+      <p>Advanced 3D printing & prototyping.</p></a>
+    </div>
+    <div class="card"><a href="battery-repair.html">
+      <h2>HV Battery Repair</h2>
+      <p>Repair and diagnostics of EV & hybrid high-voltage batteries.</p></a>
+    </div>
+  </section>
 
-  <footer>© 2025 Alexis Garage. All rights reserved.</footer>
+  <!-- Request Section -->
+  <section id="request" class="request-section">
+    <h2>Need a Quote or Callback?</h2>
+    <p>We're ready to help. Choose your service and leave your details.</p>
+    <a href="#contact" class="whatsapp-btn">Request Now</a>
+  </section>
+
+  <!-- Why Us Section -->
+  <section id="why" class="why-us">
+    <h2>Why Choose Alexis Garage?</h2>
+    <ul>
+      <li>✓ Over 10 years of experience with premium cars</li>
+      <li>✓ First in Seychelles to retrofit EV batteries</li>
+      <li>✓ Precision welding for stainless steel and aluminum structures</li>
+      <li>✓ Custom 3D printing and rapid prototyping</li>
+    </ul>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="contact-form">
+    <h2>Request a Callback</h2>
+    <form action="https://formspree.io/f/xgegbkda" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="tel" name="phone" placeholder="Phone / WhatsApp" required />
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option>Diagnostics</option>
+        <option>EV Battery Upgrade</option>
+        <option>Laser Welding</option>
+        <option>3D Printing</option>
+        <option>HV Battery Repair</option>
+      </select>
+      <textarea name="message" placeholder="Your message..." rows="4"></textarea>
+      <button type="submit">Send Request</button>
+    </form>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    © 2025 Alexis Garage. All rights reserved.
+  </footer>
 
 </body>
+</html>
+
 </html>
