@@ -61,3 +61,26 @@ footer {
   font-size: 0.9em;
   color: #777;
 }
+.site-header {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  animation: fadeIn 1.5s ease;
+}
+
+.logo {
+  width: 160px;
+  display: block;
+  margin: 0 auto 15px;
+  filter: drop-shadow(0 0 10px #0ff);
+  transition: transform 0.3s ease;
+  opacity: 0.95;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
