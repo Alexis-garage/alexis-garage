@@ -146,3 +146,32 @@ h1, h2, h3, h4, h5 {
 h1, h2, h3, h4, h5 {
   color: #00bfff;
 }
+.main-nav {
+  background: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px);
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 10px 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.main-nav a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: #ffffff;
+}
