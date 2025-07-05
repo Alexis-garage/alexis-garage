@@ -11,24 +11,26 @@
   <style>
    html { scroll-behavior: smooth; }
 
-    .request-section {
-      background: #181818;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
+    <section class="request-section" id="request">
+  <h2>Need a Quote or Callback?</h2>
+  <p>We're ready to help. Choose your service and leave your details.</p>
 
-    .request-section h2 {
-      color: #00bfff;
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
+  <form class="request-form" style="max-width: 400px; margin: 0 auto;">
+    <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+    <input type="tel" name="phone" placeholder="Phone Number" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+    <select name="service" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+      <option value="">Select a Service</option>
+      <option value="diagnostics">Diagnostics</option>
+      <option value="neoenergy">NeoEnergy</option>
+      <option value="superweld">Superweld</option>
+      <option value="neoprint">NeoPrint</option>
+    </select>
+    <button type="submit" style="background-color: #28a745; color: white; border: none; padding: 12px 20px; width: 100%; border-radius: 6px; font-weight: bold; cursor: pointer;">
+      Send Request
+    </button>
+  </form>
+</section>
 
-    .request-section p {
-      font-size: 1.1em;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
 
     .why-us {
       background: #121212;
