@@ -79,6 +79,10 @@ footer {
 .logo:hover {
   transform: scale(1.05);
 }
+h1, h2, h3, h4, h5 {
+  color: #00bfff; /* ярко-синий */
+}
+
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
