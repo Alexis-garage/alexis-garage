@@ -84,7 +84,7 @@
   </style>
  </head>
  <body>
-  <!-- Навигация -->
+  <!-- РќР°РІРёРіР°С†РёСЏ -->
   <nav class="main-nav">
    <ul>
     <li>
@@ -109,7 +109,7 @@
     </li>
    </ul>
   </nav>
-  <!-- Хедер -->
+  <!-- РҐРµРґРµСЂ -->
   <header class="site-header">
    <img alt="Alexis LTD Logo" class="logo" src="assets/logo.png"/>
    <h1>
@@ -119,7 +119,7 @@
     Premium Auto Service in Seychelles
    </p>
   </header>
-  <!-- Услуги -->
+  <!-- РЈСЃР»СѓРіРё -->
   <section class="services" id="services">
    <div class="card">
     <a href="diagnostics.html">
@@ -171,16 +171,16 @@
    </h2>
    <ul>
     <li>
-     ✓ Over 25 years of experience with premium cars
+     вњ“ Over 25 years of experience with premium cars
     </li>
     <li>
-     ✓ First in Seychelles to retrofit EV batteries
+     вњ“ First in Seychelles to retrofit EV batteries
     </li>
     <li>
-     ✓ Precision welding for stainless steel and aluminum structures
+     вњ“ Precision welding for stainless steel and aluminum structures
     </li>
     <li>
-     ✓ Custom 3D printing and rapid prototyping
+     вњ“ Custom 3D printing and rapid prototyping
     </li>
    </ul>
   </section>
@@ -224,9 +224,9 @@
 </section>
 
 
-<!-- Футер -->
+<!-- Р¤СѓС‚РµСЂ -->
   <footer>
-   © 2025 Alexis Garage. All rights reserved.
+   В© 2025 Alexis Garage. All rights reserved.
   </footer>
  
 <script>
@@ -242,9 +242,9 @@
       }
     });
     if (response.ok) {
-      form.innerHTML = "<p style='color: #28a745; font-weight: bold;'>✅ Thank you! We’ll contact you shortly.</p>";
+      form.innerHTML = "<p style='color: #28a745; font-weight: bold;'>вњ… Thank you! WeвЂ™ll contact you shortly.</p>";
     } else {
-      form.innerHTML = "<p style='color: red;'>⚠️ Something went wrong. Please try again later.</p>";
+      form.innerHTML = "<p style='color: red;'>вљ пёЏ Something went wrong. Please try again later.</p>";
     }
   });
 </script>
@@ -263,9 +263,9 @@
       }
     });
     if (response.ok) {
-      form.innerHTML = "<p style='color: #28a745; font-weight: bold;'>✅ Thank you! We’ll contact you shortly.</p>";
+      form.innerHTML = "<p style='color: #28a745; font-weight: bold;'>вњ… Thank you! WeвЂ™ll contact you shortly.</p>";
     } else {
-      form.innerHTML = "<p style='color: red;'>⚠️ Something went wrong. Please try again later.</p>";
+      form.innerHTML = "<p style='color: red;'>вљ пёЏ Something went wrong. Please try again later.</p>";
     }
   });
 <script>
@@ -289,8 +289,48 @@
 </script>
 >
 
+
+<script>
+document.getElementById('request-form')?.addEventListener('submit', async (e) => {
+  const form = e.target;
+  const data = {
+    name: form.name?.value,
+    email: form.email?.value,
+  };
+  try {
+    await fetch('/api/send-auto-reply', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+  } catch (err) {
+    console.error('Failed to send auto-reply:', err);
+  }
+});
+</script>
 </body>
+
 </html>
   </script>
+
+<script>
+document.getElementById('request-form')?.addEventListener('submit', async (e) => {
+  const form = e.target;
+  const data = {
+    name: form.name?.value,
+    email: form.email?.value,
+  };
+  try {
+    await fetch('/api/send-auto-reply', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+  } catch (err) {
+    console.error('Failed to send auto-reply:', err);
+  }
+});
+</script>
 </body>
+
 </html>
