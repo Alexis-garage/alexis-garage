@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     from: `"Alexis Garage" <${process.env.SMTP_USER}>`,
     to: email,
     subject: 'We received your request',
-    text: `Hello${name ? \` \${name}\` : ''},\n\nThanks for contacting Alexis Garage. We will get back to you soon.`,
+    text: `Hello${name ? ` ${name}` : ''},\n\nThanks for contacting Alexis Garage. We will get back to you soon.`,
   };
 
   try {
