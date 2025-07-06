@@ -1,1 +1,30 @@
+<form id="request-form">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send</button>
+</form>
 
+<script>
+  document.getElementById('request-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+    };
+
+    try {
+      await fetch('/api/send-auto-reply', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+    } catch (err) {
+      console.error('Failed to send auto-reply:', err);
+    }
+
+    form.submit(); // РґР°Р»СЊС€Рµ вЂ” СЃС‚Р°РЅРґР°СЂС‚РЅР°СЏ РѕС‚РїСЂР°РІРєР° РЅР° Formspree
+  });
+</script>
+    
