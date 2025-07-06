@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexis Garage</title>
+</head>
+<body>
+  <h1>Request Form</h1>
+  <form id="request-form" action="https://formspree.io/f/mqaboqyq" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
 
+  <script>
+    document.getElementById('request-form').addEventListener('submit', async (e) => {
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+      };
+
+      try {
+        await fetch('/api/send-auto-reply', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+      } catch (err) {
+        console.error('Failed to send auto-reply:', err);
+      }
+    });
+  </script>
+</body>
+</html>
